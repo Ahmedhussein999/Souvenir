@@ -22,15 +22,15 @@ public class App {
         JPanel panel = new JPanel();  
         panel.setLayout(new BorderLayout());  
         
-        JLabel label = new JLabel("Write down your best thoguhts! :");
+        JLabel label = new JLabel("Write down your best thoughts :");
         JTextArea noteInput = new JTextArea(5, 20);
         JScrollPane scrollPane = new JScrollPane(noteInput);
         
         // buttons
-    JButton addButton = new JButton("The note");  
+    JButton addButton = new JButton("Add");  
       
 
-        // IDK even know what this does, but this is what he put down
+        // *
         DefaultListModel<String> noteListModel = new DefaultListModel<>();
         JList<String> noteList = new JList<>(noteListModel);
         JScrollPane listScrollPane = new JScrollPane(noteList);
@@ -54,7 +54,7 @@ public class App {
                     noteListModel.addElement(noteText);
                     noteInput.setText("");
                 } else {
-                    JOptionPane.showMessageDialog(frame, "Note is wrong forsure", "Wrong bruh", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(frame, "Add a note", "Try again", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
